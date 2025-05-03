@@ -3,6 +3,7 @@ package com.project.model;
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -50,7 +51,7 @@ public class Student {
 	private Boolean stacjonarny;
 	
 	@ManyToMany(mappedBy = "studenci")
-	@JsonBackReference
+	@JsonIgnore
 	private Set<Projekt> projekty;
 	
 	public Student() {}

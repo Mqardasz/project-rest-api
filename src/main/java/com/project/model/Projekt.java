@@ -2,6 +2,7 @@ package com.project.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EntityListeners;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinTable;
@@ -10,15 +11,20 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Set;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
+@EntityListeners(AuditingEntityListener.class)
 @Table(name="projekt")
 public class Projekt {
 	
@@ -36,7 +42,7 @@ public class Projekt {
 	@Column(length = 1000)
 	private String opis;
 	
-	@NotBlank(message = "{projekt.nazwa.notblank}")
+	// działa to automatycznie
 	@CreatedDate
 	@Column(name = "dataczas_utworzenia", nullable = false, updatable = false)
 	private LocalDateTime createdDate;
@@ -51,7 +57,7 @@ public class Projekt {
 	
 	
 	 @ManyToMany
-	 @JsonManagedReference
+	 @JsonIgnore
 	 @JoinTable(name = "projekt_student",
 	 			joinColumns = {@JoinColumn(name="projekt_id")},
 	 			inverseJoinColumns = {@JoinColumn(name="student_id")})
