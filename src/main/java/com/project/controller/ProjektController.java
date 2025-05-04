@@ -26,12 +26,12 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 @RequestMapping("/api") // adnotacja @RequestMapping umieszczona w tym miejscu pozwala definiować
 // cześć wspólną adresu, wstawianą przed wszystkimi poniższymi ścieżkami
 @Tag(name = "Projekt") // zmiana nazwy, uwzględniania m.in. przy generowaniu specyfikacji za pomocą OpenAPI
-public class ProjektRestController {
+public class ProjektController {
 
     private ProjektService projektService; // serwis jest automatycznie wstrzykiwany poprzez konstruktor
 
     @Autowired
-    public ProjektRestController(ProjektService projektService) {
+    public ProjektController(ProjektService projektService) {
         this.projektService = projektService;
     }
 

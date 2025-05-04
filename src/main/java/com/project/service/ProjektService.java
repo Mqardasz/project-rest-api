@@ -7,10 +7,10 @@ import com.project.model.Projekt;
 
 public interface ProjektService {
 	
-	Optional<Projekt> getProjekt(Integer projektId);
-	Projekt setProjekt(Projekt projekt);
-	void deleteProjekt(Integer projektId);
-	Page<Projekt> getProjekty(Pageable pageable);
-	Page<Projekt> searchByNazwa(String nazwa, Pageable pageable);
+	Optional<Projekt> getProjekt(Integer projektId);	// read
+	Projekt setProjekt(Projekt projekt);				// create, update
+	void deleteProjekt(Integer projektId);				// delete
+	Page<Projekt> getProjekty(Pageable pageable);		// read
+	Page<Projekt> searchByNazwa(String nazwa, Pageable pageable);	// read
 	
 }
