@@ -13,6 +13,8 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
+
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Set;
@@ -27,6 +29,14 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 @EntityListeners(AuditingEntityListener.class)
 @Table(name="projekt")
 public class Projekt {
+	
+	public Projekt(Integer projektId, String nazwa, String opis, LocalDateTime createdDate, LocalDate lastModifiedDate) {
+		this.projektId = projektId;
+		this.nazwa = nazwa;
+		this.opis = opis;
+		this.createdDate = createdDate;
+		this.lastModifiedDate = lastModifiedDate;
+	}
 	
 	@Id
 	@GeneratedValue
@@ -49,7 +59,7 @@ public class Projekt {
 	
 	@LastModifiedDate
 	@Column(name = "dataczas_modyfikacji", insertable = false)
-	private LocalDateTime lastModifiedDate;
+	private LocalDate lastModifiedDate;
 	
 	@OneToMany(mappedBy = "projekt")
 	@JsonManagedReference
@@ -95,11 +105,11 @@ public class Projekt {
 		this.createdDate = createdDate;
 	}
 
-	public LocalDateTime getLastModifiedDate() {
+	public LocalDate getLastModifiedDate() {
 		return lastModifiedDate;
 	}
 
-	public void setLastModifiedDate(LocalDateTime lastModifiedDate) {
+	public void setLastModifiedDate(LocalDate lastModifiedDate) {
 		this.lastModifiedDate = lastModifiedDate;
 	}
 

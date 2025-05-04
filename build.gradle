@@ -39,5 +39,9 @@ dependencies {
 }
 
 tasks.named('test') {
-	useJUnitPlatform()
+	useJUnitPlatform() //aktywacja natywnego wsparcia JUnit 5 (od wersji 4.6)
+	testLogging {
+		showStandardStreams = true //ustawia drukowanie komunikatów w konsoli
 }
+}
+
