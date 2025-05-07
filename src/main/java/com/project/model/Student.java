@@ -52,7 +52,7 @@ public class Student {
 	
 	@ManyToMany(mappedBy = "studenci")
 	@JsonIgnore
-	private Set<Projekt> projekty;
+	private Set<Projekt> projekty; // zbior jest bardziej wydajny
 	
 	public Student() {}
 	

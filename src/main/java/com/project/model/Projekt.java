@@ -11,7 +11,6 @@ import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 import java.time.LocalDate;
@@ -30,11 +29,28 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 @Table(name="projekt")
 public class Projekt {
 	
+	public Projekt() {
+		
+	}
+	
 	public Projekt(Integer projektId, String nazwa, String opis, LocalDateTime createdDate, LocalDate lastModifiedDate) {
 		this.projektId = projektId;
 		this.nazwa = nazwa;
 		this.opis = opis;
 		this.createdDate = createdDate;
+		this.lastModifiedDate = lastModifiedDate;
+	}
+	
+	public Projekt(String nazwa, String opis, LocalDate lastModifiedDate) {
+		this.nazwa = nazwa;
+		this.opis = opis;
+		this.lastModifiedDate = lastModifiedDate;
+	}
+	
+	public Projekt(Integer projektId, String nazwa, String opis, LocalDate lastModifiedDate) {
+		this.projektId = projektId;
+		this.nazwa = nazwa;
+		this.opis = opis;
 		this.lastModifiedDate = lastModifiedDate;
 	}
 	

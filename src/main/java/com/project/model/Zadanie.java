@@ -17,6 +17,22 @@ import jakarta.validation.constraints.Size;
 @Entity
 @Table(name="zadanie_id")
 public class Zadanie {
+	
+	public Zadanie() {
+		
+	}
+	
+	public Zadanie(Integer zadanieId, Projekt projekt, String nazwa, Integer kolejnosc, String opis, LocalDateTime dataczasDodania) {
+		this.zadanieId = zadanieId;
+		this.projekt = projekt;
+		this.nazwa = nazwa;
+		this.kolejnosc = kolejnosc;
+		this.opis = opis;
+		this.dataczasDodania = dataczasDodania;
+	}
+
+
+
 	@Id
 	@GeneratedValue
 	@Column(name="zadanie_id")
