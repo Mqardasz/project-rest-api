@@ -75,14 +75,14 @@ public class ProjektController {
 
     // Przykład żądania wywołującego metodę: http://localhost:8080/api/projekty?page=0&size=10&sort=nazwa,desc
     @GetMapping(value = "/projekty")
-    Page<Projekt> getProjekty(Pageable pageable) { // @RequestHeader HttpHeaders headers – jeżeli potrzebny
+    public Page<Projekt> getProjekty(Pageable pageable) { // @RequestHeader HttpHeaders headers – jeżeli potrzebny
         return projektService.getProjekty(pageable); // byłby nagłówek, wystarczy dodać drugą zmienną z adnotacją
     }
 
     // Przykład żądania wywołującego metodę: GET http://localhost:8080/api/projekty?nazwa=webowa
     // Metoda zostanie wywołana tylko, gdy w żądaniu będzie przesyłana wartość parametru nazwa.
     @GetMapping(value = "/projekty", params = "nazwa")
-    Page<Projekt> getProjektyByNazwa(@RequestParam(name = "nazwa") String nazwa, Pageable pageable) {
+    public Page<Projekt> getProjektyByNazwa(@RequestParam(name = "nazwa") String nazwa, Pageable pageable) {
         return projektService.searchByNazwa(nazwa, pageable);
     }
 }
