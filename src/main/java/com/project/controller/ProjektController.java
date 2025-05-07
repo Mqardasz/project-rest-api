@@ -39,14 +39,14 @@ public class ProjektController {
     // RODZAJ METODY HTTP, A TAKŻE ADRES I PARAMETRY ŻĄDANIA
     // Przykład żądania wywołującego metodę: GET http://localhost:8080/api/projekty/1
     @GetMapping("/projekty/{projektId}")
-    ResponseEntity<Projekt> getProjekt(@PathVariable("projektId") Integer projektId) { // @PathVariable oznacza,
+    public ResponseEntity<Projekt> getProjekt(@PathVariable("projektId") Integer projektId) { // @PathVariable oznacza,
         return ResponseEntity.of(projektService.getProjekt(projektId)); // że wartość parametru
     } // przekazywana jest w ścieżce
 
     // @Valid włącza automatyczną walidację na podstawie adnotacji zawartych
     // w modelu np. NotNull, Size, NotEmpty itd. (z jakarta.validation.constraints.*)
     @PostMapping(path = "/projekty")
-    ResponseEntity<Void> createProjekt(@Valid @RequestBody Projekt projekt) { // @RequestBody oznacza, że dane
+    public ResponseEntity<Void> createProjekt(@Valid @RequestBody Projekt projekt) { // @RequestBody oznacza, że dane
         // projektu (w formacie JSON) są
         Projekt createdProjekt = projektService.setProjekt(projekt); // przekazywane w ciele żądania
         URI location = ServletUriComponentsBuilder.fromCurrentRequest() // link wskazujący utworzony projekt
