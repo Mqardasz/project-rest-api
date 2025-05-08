@@ -1,9 +1,13 @@
 package com.project.service;
 
 import com.project.model.Student;
+import com.project.controller.StudentController;
 import com.project.model.Projekt;
 import com.project.repository.StudentRepository;
 import com.project.repository.ProjektRepository;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -18,9 +22,12 @@ public class StudentServiceImpl implements StudentService {
 
     @Autowired
     private ProjektRepository projektRepository;
+    
+    private static final Logger logger = LoggerFactory.getLogger(StudentServiceImpl.class);
 
     @Override
     public Student setStudent(Student student) {
+        logger.info("wywolano set student");
         return studentRepository.save(student);
     }
 

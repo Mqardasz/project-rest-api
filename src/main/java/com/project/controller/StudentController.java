@@ -3,6 +3,8 @@ package com.project.controller;
 import java.net.URI;
 import java.util.Optional;
 
+import jakarta.validation.Valid;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,17 +17,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-
 import com.project.model.Student;
-import com.project.service.*;
-
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
+import com.project.service.StudentService;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import jakarta.validation.Valid;
 
 
 @RestController
@@ -38,6 +37,7 @@ public class StudentController {
     @Autowired
     public StudentController(StudentService studentService) {
         this.studentService = studentService;
+    	logger.info("zainicjowano klase");
     }
     
     @GetMapping("/studenci/{studentId}")
@@ -46,8 +46,9 @@ public class StudentController {
     }
     
     @PostMapping(path = "/studenci")
-    ResponseEntity<Void> createStudent(@Valid @RequestBody Student student) {
-    	logger.info("Create student: {}", student);
+    ResponseEntity<Void> createStudent(@RequestBody Student student) {
+    	System.out.println(student);
+    	System.out.println(student.getImie());
     	Student createStudent = studentService.setStudent(student);
     	URI location = ServletUriComponentsBuilder.fromCurrentRequest()
     			.path("/{studentId}").buildAndExpand(createStudent.getStudentId()).toUri();

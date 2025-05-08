@@ -2,14 +2,15 @@ package com.project.model;
 
 import java.util.Set;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import jakarta.persistence.Index;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
@@ -17,10 +18,10 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 @Entity //Indeksujemy kolumny, które są najczęściej wykorzystywane do wyszukiwania studentów
-@Table(name = "student",
-		indexes = { @Index(name = "idx_nazwisko", columnList = "nazwisko", unique = false),
-		@Index(name = "idx_nr_indeksu", columnList = "nr_indeksu", unique = true) })
+@Table(name = "student")
 public class Student {
+	
+    private static final Logger logger = LoggerFactory.getLogger(Student.class);
 	
 	public Student() {}
 	
@@ -30,6 +31,8 @@ public class Student {
 		this.nrIndeksu = nrIndeksu;
 		this.email = email;
 		this.stacjonarny = stacjonarny;
+		System.out.println(imie);
+    	System.out.println("stworzono studenta");
 		}
 	
 	@Id
@@ -65,14 +68,11 @@ public class Student {
 	@JsonIgnore
 	private Set<Projekt> projekty; // zbior jest bardziej wydajny
 	
-	
-	/*	ODKOMENTOWAĆ DO TESTÓW !
 	public Student(String imie, String nazwisko, String nrIndeksu, Boolean stacjonarny) {
 		this.imie = imie;
 		this.nazwisko = nazwisko;
 		this.nrIndeksu = nrIndeksu;
 	}
-	*/
 	
 	public Integer getStudentId() {
 		return studentId;

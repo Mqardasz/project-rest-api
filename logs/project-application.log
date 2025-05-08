@@ -23,3 +23,64 @@
 2025-05-08 19:14:00.585 [restartedMain] INFO  c.project.ProjectRestApiApplication.(53) - Starting ProjectRestApiApplication using Java 21.0.4 with PID 6388 (C:\eclipse-2024-09\workspace\project-rest-api\bin\main started by Michal in C:\eclipse-2024-09\workspace\project-rest-api)
 2025-05-08 19:14:00.586 [restartedMain] INFO  c.project.ProjectRestApiApplication.(652) - No active profile set, falling back to 1 default profile: "default"
 2025-05-08 19:14:01.482 [restartedMain] INFO  c.project.ProjectRestApiApplication.(59) - Started ProjectRestApiApplication in 0.925 seconds (process running for 3237.797)
+2025-05-08 19:36:18.648 [restartedMain] INFO  c.project.ProjectRestApiApplication.(53) - Starting ProjectRestApiApplication using Java 21.0.4 with PID 6388 (C:\eclipse-2024-09\workspace\project-rest-api\bin\main started by Michal in C:\eclipse-2024-09\workspace\project-rest-api)
+2025-05-08 19:36:18.650 [restartedMain] INFO  c.project.ProjectRestApiApplication.(652) - No active profile set, falling back to 1 default profile: "default"
+2025-05-08 19:36:19.459 [restartedMain] INFO  c.project.ProjectRestApiApplication.(59) - Started ProjectRestApiApplication in 0.834 seconds (process running for 4575.8)
+2025-05-08 19:36:58.636 [restartedMain] INFO  c.project.ProjectRestApiApplication.(53) - Starting ProjectRestApiApplication using Java 21.0.4 with PID 6388 (C:\eclipse-2024-09\workspace\project-rest-api\bin\main started by Michal in C:\eclipse-2024-09\workspace\project-rest-api)
+2025-05-08 19:36:58.636 [restartedMain] INFO  c.project.ProjectRestApiApplication.(652) - No active profile set, falling back to 1 default profile: "default"
+2025-05-08 19:36:59.347 [restartedMain] INFO  c.p.controller.StudentController.(41) - zainicjowano klase
+2025-05-08 19:36:59.498 [restartedMain] INFO  c.project.ProjectRestApiApplication.(59) - Started ProjectRestApiApplication in 0.883 seconds (process running for 4615.84)
+2025-05-08 19:39:35.594 [restartedMain] INFO  c.project.ProjectRestApiApplication.(53) - Starting ProjectRestApiApplication using Java 21.0.4 with PID 6388 (C:\eclipse-2024-09\workspace\project-rest-api\bin\main started by Michal in C:\eclipse-2024-09\workspace\project-rest-api)
+2025-05-08 19:39:35.595 [restartedMain] INFO  c.project.ProjectRestApiApplication.(652) - No active profile set, falling back to 1 default profile: "default"
+2025-05-08 19:39:36.307 [restartedMain] INFO  c.p.controller.StudentController.(41) - zainicjowano klase
+2025-05-08 19:39:36.439 [restartedMain] INFO  c.project.ProjectRestApiApplication.(59) - Started ProjectRestApiApplication in 0.869 seconds (process running for 4772.783)
+2025-05-08 19:43:07.692 [restartedMain] INFO  c.project.ProjectRestApiApplication.(53) - Starting ProjectRestApiApplication using Java 21.0.4 with PID 6388 (C:\eclipse-2024-09\workspace\project-rest-api\bin\main started by Michal in C:\eclipse-2024-09\workspace\project-rest-api)
+2025-05-08 19:43:07.693 [restartedMain] INFO  c.project.ProjectRestApiApplication.(652) - No active profile set, falling back to 1 default profile: "default"
+2025-05-08 19:43:08.578 [restartedMain] INFO  c.p.controller.StudentController.(41) - zainicjowano klase
+2025-05-08 19:43:08.708 [restartedMain] INFO  c.project.ProjectRestApiApplication.(59) - Started ProjectRestApiApplication in 1.069 seconds (process running for 4985.054)
+2025-05-08 19:44:14.244 [restartedMain] INFO  c.project.ProjectRestApiApplication.(53) - Starting ProjectRestApiApplication using Java 21.0.4 with PID 6388 (C:\eclipse-2024-09\workspace\project-rest-api\bin\main started by Michal in C:\eclipse-2024-09\workspace\project-rest-api)
+2025-05-08 19:44:14.245 [restartedMain] INFO  c.project.ProjectRestApiApplication.(652) - No active profile set, falling back to 1 default profile: "default"
+2025-05-08 19:44:14.870 [restartedMain] INFO  c.p.controller.StudentController.(41) - zainicjowano klase
+2025-05-08 19:44:14.998 [restartedMain] INFO  c.project.ProjectRestApiApplication.(59) - Started ProjectRestApiApplication in 0.775 seconds (process running for 5051.346)
+2025-05-08 19:51:07.358 [restartedMain] INFO  c.project.ProjectRestApiApplication.(53) - Starting ProjectRestApiApplication using Java 21.0.4 with PID 6388 (C:\eclipse-2024-09\workspace\project-rest-api\bin\main started by Michal in C:\eclipse-2024-09\workspace\project-rest-api)
+2025-05-08 19:51:07.359 [restartedMain] INFO  c.project.ProjectRestApiApplication.(652) - No active profile set, falling back to 1 default profile: "default"
+2025-05-08 19:51:07.977 [restartedMain] INFO  c.p.controller.StudentController.(41) - zainicjowano klase
+2025-05-08 19:51:08.119 [restartedMain] INFO  c.project.ProjectRestApiApplication.(59) - Started ProjectRestApiApplication in 0.781 seconds (process running for 5464.472)
+2025-05-08 19:54:06.647 [restartedMain] INFO  c.project.ProjectRestApiApplication.(53) - Starting ProjectRestApiApplication using Java 21.0.4 with PID 6388 (C:\eclipse-2024-09\workspace\project-rest-api\bin\main started by Michal in C:\eclipse-2024-09\workspace\project-rest-api)
+2025-05-08 19:54:06.648 [restartedMain] INFO  c.project.ProjectRestApiApplication.(652) - No active profile set, falling back to 1 default profile: "default"
+2025-05-08 19:54:07.261 [restartedMain] INFO  c.p.controller.StudentController.(41) - zainicjowano klase
+2025-05-08 19:54:07.393 [restartedMain] INFO  c.project.ProjectRestApiApplication.(59) - Started ProjectRestApiApplication in 0.768 seconds (process running for 5643.748)
+2025-05-08 19:54:09.787 [http-nio-8080-exec-1] INFO  c.p.controller.StudentController.(51) - Create student: com.project.model.Student@1a706f36
+2025-05-08 19:54:09.788 [http-nio-8080-exec-1] INFO  c.project.service.StudentServiceImpl.(30) - wywolano set student
+2025-05-08 19:55:31.225 [restartedMain] INFO  c.project.ProjectRestApiApplication.(53) - Starting ProjectRestApiApplication using Java 21.0.4 with PID 6388 (C:\eclipse-2024-09\workspace\project-rest-api\bin\main started by Michal in C:\eclipse-2024-09\workspace\project-rest-api)
+2025-05-08 19:55:31.225 [restartedMain] INFO  c.project.ProjectRestApiApplication.(652) - No active profile set, falling back to 1 default profile: "default"
+2025-05-08 19:55:32.054 [restartedMain] INFO  c.p.controller.StudentController.(41) - zainicjowano klase
+2025-05-08 19:55:32.159 [restartedMain] INFO  c.project.ProjectRestApiApplication.(59) - Started ProjectRestApiApplication in 0.957 seconds (process running for 5728.515)
+2025-05-08 19:55:35.804 [http-nio-8080-exec-1] INFO  c.project.service.StudentServiceImpl.(30) - wywolano set student
+2025-05-08 19:56:59.116 [restartedMain] INFO  c.project.ProjectRestApiApplication.(53) - Starting ProjectRestApiApplication using Java 21.0.4 with PID 6388 (C:\eclipse-2024-09\workspace\project-rest-api\bin\main started by Michal in C:\eclipse-2024-09\workspace\project-rest-api)
+2025-05-08 19:56:59.116 [restartedMain] INFO  c.project.ProjectRestApiApplication.(652) - No active profile set, falling back to 1 default profile: "default"
+2025-05-08 19:56:59.788 [restartedMain] INFO  c.p.controller.StudentController.(41) - zainicjowano klase
+2025-05-08 19:56:59.907 [restartedMain] INFO  c.project.ProjectRestApiApplication.(59) - Started ProjectRestApiApplication in 0.814 seconds (process running for 5816.263)
+2025-05-08 19:57:04.353 [http-nio-8080-exec-1] INFO  c.project.service.StudentServiceImpl.(30) - wywolano set student
+2025-05-08 19:58:39.003 [restartedMain] INFO  c.project.ProjectRestApiApplication.(53) - Starting ProjectRestApiApplication using Java 21.0.4 with PID 6388 (C:\eclipse-2024-09\workspace\project-rest-api\bin\main started by Michal in C:\eclipse-2024-09\workspace\project-rest-api)
+2025-05-08 19:58:39.004 [restartedMain] INFO  c.project.ProjectRestApiApplication.(652) - No active profile set, falling back to 1 default profile: "default"
+2025-05-08 19:58:39.733 [restartedMain] INFO  c.p.controller.StudentController.(41) - zainicjowano klase
+2025-05-08 19:58:39.843 [restartedMain] INFO  c.project.ProjectRestApiApplication.(59) - Started ProjectRestApiApplication in 0.858 seconds (process running for 5916.201)
+2025-05-08 19:58:56.616 [restartedMain] INFO  c.project.ProjectRestApiApplication.(53) - Starting ProjectRestApiApplication using Java 21.0.4 with PID 6388 (C:\eclipse-2024-09\workspace\project-rest-api\bin\main started by Michal in C:\eclipse-2024-09\workspace\project-rest-api)
+2025-05-08 19:58:56.618 [restartedMain] INFO  c.project.ProjectRestApiApplication.(652) - No active profile set, falling back to 1 default profile: "default"
+2025-05-08 19:58:57.319 [restartedMain] INFO  c.p.controller.StudentController.(41) - zainicjowano klase
+2025-05-08 19:58:57.436 [restartedMain] INFO  c.project.ProjectRestApiApplication.(59) - Started ProjectRestApiApplication in 0.839 seconds (process running for 5933.794)
+2025-05-08 19:59:44.697 [restartedMain] INFO  c.project.ProjectRestApiApplication.(53) - Starting ProjectRestApiApplication using Java 21.0.4 with PID 6388 (C:\eclipse-2024-09\workspace\project-rest-api\bin\main started by Michal in C:\eclipse-2024-09\workspace\project-rest-api)
+2025-05-08 19:59:44.697 [restartedMain] INFO  c.project.ProjectRestApiApplication.(652) - No active profile set, falling back to 1 default profile: "default"
+2025-05-08 19:59:45.329 [restartedMain] INFO  c.p.controller.StudentController.(41) - zainicjowano klase
+2025-05-08 19:59:45.444 [restartedMain] INFO  c.project.ProjectRestApiApplication.(59) - Started ProjectRestApiApplication in 0.764 seconds (process running for 5981.801)
+2025-05-08 19:59:50.954 [http-nio-8080-exec-1] INFO  c.project.service.StudentServiceImpl.(30) - wywolano set student
+2025-05-08 20:00:04.495 [http-nio-8080-exec-2] INFO  c.project.service.StudentServiceImpl.(30) - wywolano set student
+2025-05-08 20:03:03.353 [restartedMain] INFO  c.project.ProjectRestApiApplication.(53) - Starting ProjectRestApiApplication using Java 21.0.4 with PID 6388 (C:\eclipse-2024-09\workspace\project-rest-api\bin\main started by Michal in C:\eclipse-2024-09\workspace\project-rest-api)
+2025-05-08 20:03:03.353 [restartedMain] INFO  c.project.ProjectRestApiApplication.(652) - No active profile set, falling back to 1 default profile: "default"
+2025-05-08 20:03:04.119 [restartedMain] INFO  c.p.controller.StudentController.(38) - zainicjowano klase
+2025-05-08 20:03:04.259 [restartedMain] INFO  c.project.ProjectRestApiApplication.(59) - Started ProjectRestApiApplication in 0.924 seconds (process running for 6180.619)
+2025-05-08 20:03:18.990 [restartedMain] INFO  c.project.ProjectRestApiApplication.(53) - Starting ProjectRestApiApplication using Java 21.0.4 with PID 6388 (C:\eclipse-2024-09\workspace\project-rest-api\bin\main started by Michal in C:\eclipse-2024-09\workspace\project-rest-api)
+2025-05-08 20:03:18.991 [restartedMain] INFO  c.project.ProjectRestApiApplication.(652) - No active profile set, falling back to 1 default profile: "default"
+2025-05-08 20:03:19.743 [restartedMain] INFO  c.p.controller.StudentController.(40) - zainicjowano klase
+2025-05-08 20:03:19.848 [restartedMain] INFO  c.project.ProjectRestApiApplication.(59) - Started ProjectRestApiApplication in 0.878 seconds (process running for 6196.208)
