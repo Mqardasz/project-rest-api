@@ -3,6 +3,8 @@ package com.project.controller;
 import java.net.URI;
 import java.util.Optional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -32,7 +34,7 @@ import jakarta.validation.Valid;
 public class StudentController {
 
 	private StudentService studentService;
-	
+    private static final Logger logger = LoggerFactory.getLogger(StudentController.class);
     @Autowired
     public StudentController(StudentService studentService) {
         this.studentService = studentService;
@@ -45,6 +47,7 @@ public class StudentController {
     
     @PostMapping(path = "/studenci")
     ResponseEntity<Void> createStudent(@Valid @RequestBody Student student) {
+    	logger.info("Create student: {}", student);
     	Student createStudent = studentService.setStudent(student);
     	URI location = ServletUriComponentsBuilder.fromCurrentRequest()
     			.path("/{studentId}").buildAndExpand(createStudent.getStudentId()).toUri();

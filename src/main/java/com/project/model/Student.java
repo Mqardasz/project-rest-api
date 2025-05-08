@@ -13,6 +13,7 @@ import jakarta.persistence.Index;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 @Entity //Indeksujemy kolumny, które są najczęściej wykorzystywane do wyszukiwania studentów
@@ -21,13 +22,23 @@ import jakarta.validation.constraints.Size;
 		@Index(name = "idx_nr_indeksu", columnList = "nr_indeksu", unique = true) })
 public class Student {
 	
+	public Student() {}
+	
+	public Student(String imie, String nazwisko, String nrIndeksu, String email, Boolean stacjonarny) {
+		this.imie = imie;
+		this.nazwisko = nazwisko;
+		this.nrIndeksu = nrIndeksu;
+		this.email = email;
+		this.stacjonarny = stacjonarny;
+		}
+	
 	@Id
 	@GeneratedValue
 	@Column(name="student_id")
 	private Integer studentId;
 	
 	@NotBlank(message = "{projekt.nazwa.notblank}")
-	@Size(min = 3, max = 50, message ="{projekt.nazwa.size}")
+	@Size(min = 3, max = 50, message = "{projekt.nazwa.size}")
 	@Column(length = 50, nullable = false)
 	private String imie;
 	
@@ -46,7 +57,7 @@ public class Student {
 	@Column(length = 50, nullable = false, unique = true)
 	private String email;
 	
-	@NotBlank(message = "{projekt.nazwa.notblank}")
+	@NotNull(message = "{projekt.nazwa.notblank}")
 	@Column(nullable = false)
 	private Boolean stacjonarny;
 	
@@ -54,23 +65,15 @@ public class Student {
 	@JsonIgnore
 	private Set<Projekt> projekty; // zbior jest bardziej wydajny
 	
-	public Student() {}
 	
+	/*	ODKOMENTOWAĆ DO TESTÓW !
 	public Student(String imie, String nazwisko, String nrIndeksu, Boolean stacjonarny) {
 		this.imie = imie;
 		this.nazwisko = nazwisko;
 		this.nrIndeksu = nrIndeksu;
 	}
-
+	*/
 	
-	public Student(String imie, String nazwisko, String nrIndeksu, String email, Boolean stacjonarny) {
-		this.imie = imie;
-		this.nazwisko = nazwisko;
-		this.nrIndeksu = nrIndeksu;
-		this.email = email;
-		this.stacjonarny = stacjonarny;
-		}
-
 	public Integer getStudentId() {
 		return studentId;
 	}

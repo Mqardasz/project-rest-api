@@ -2,6 +2,9 @@ package com.project.controller;
 
 import java.net.URI;
 import jakarta.validation.Valid;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -29,6 +32,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 public class ProjektController {
 
     private ProjektService projektService; // serwis jest automatycznie wstrzykiwany poprzez konstruktor
+    private static final Logger logger = LoggerFactory.getLogger(ProjektController.class);
 
     @Autowired
     public ProjektController(ProjektService projektService) {
@@ -40,6 +44,7 @@ public class ProjektController {
     // Przykład żądania wywołującego metodę: GET http://localhost:8080/api/projekty/1
     @GetMapping("/projekty/{projektId}")
     public ResponseEntity<Projekt> getProjekt(@PathVariable("projektId") Integer projektId) { // @PathVariable oznacza,
+    	logger.info("Received request to get project: {}", projektId);
         return ResponseEntity.of(projektService.getProjekt(projektId)); // że wartość parametru
     } // przekazywana jest w ścieżce
 
@@ -48,11 +53,19 @@ public class ProjektController {
     @PostMapping(path = "/projekty")
     public ResponseEntity<Void> createProjekt(@Valid @RequestBody Projekt projekt) { // @RequestBody oznacza, że dane
         // projektu (w formacie JSON) są
+    	logger.info("Received request to create project: {}", projekt);
+    	
+    	try {
         Projekt createdProjekt = projektService.setProjekt(projekt); // przekazywane w ciele żądania
         URI location = ServletUriComponentsBuilder.fromCurrentRequest() // link wskazujący utworzony projekt
             .path("/{projektId}").buildAndExpand(createdProjekt.getProjektId()).toUri();
         return ResponseEntity.created(location).build(); // zwracany jest kod odpowiedzi 201 - Created
+    	} catch(Exception e) {
+    		logger.error("Failed to create project: {}. Error {}", projekt, e.getMessage(), e);
+    		return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+    	}
     } // z linkiem location w nagłówku
+    	
 
     @PutMapping("/projekty/{projektId}")
     public ResponseEntity<Void> updateProjekt(@Valid @RequestBody Projekt projekt,
